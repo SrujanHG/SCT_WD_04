@@ -1,0 +1,173 @@
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Main app container */
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #F87171; /* Accent color from the image */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #F87171;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Input area styling */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.input-area input[type="text"] {
+    flex-grow: 1;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-area input[type="text"]:focus {
+    outline: none;
+    border-color: #F87171;
+    box-shadow: 0 0 10px rgba(248, 113, 113, 0.5);
+}
+
+.input-area button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #F87171;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.input-area button:hover {
+    background-color: #ef4444;
+    transform: translateY(-2px);
+}
+
+/* Task list styling */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    cursor: grab; /* Change cursor to indicate it's draggable */
+}
+
+.task-item:hover {
+    transform: scale(1.02);
+    background-color: #333;
+}
+
+.task-item.dragging {
+    opacity: 0.5;
+    background-color: #444;
+}
+
+.task-item.completed {
+    opacity: 0.6;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-text {
+    flex-grow: 1;
+    text-align: left;
+    margin-right: 15px;
+    word-wrap: break-word;
+    font-size: 1.1rem;
+}
+
+.task-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.task-controls input[type="date"],
+.task-controls input[type="time"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: inherit;
+}
+
+.task-controls button {
+    background: none;
+    border: none;
+    color: #F87171;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+    padding: 5px;
+}
+
+.task-controls button:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.clear-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ef4444;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.clear-btn:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+}
